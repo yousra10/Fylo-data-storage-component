@@ -29,6 +29,7 @@ html, body {
   margin: auto;
   line-height: 1.5;
   min-height: 100vh;
+  min-width: 100vw;
   background-color: var(--clr-very-dark-blue);
 }
 
@@ -194,6 +195,69 @@ ul {
 
 .gras {
   font-weight: bold;
+}
+
+
+@media (max-width:672px){
+
+body{
+  background-image: url('images/bg-mobile.png');
+background-repeat: repeat-y;
+}
+
+  .container{
+    display:flex;
+    flex-direction: column;
+    background-color: var(----clr-very-dark-blue);
+  }
+
+  .container-1 ,
+  .container-2{
+    width: 100%;
+    max-width: 350px;
+  }
+
+.container-1{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+
+  gap: 13rem;
+
+}
+
+.skill-bar {
+  margin-right: 35px;
+}
+
+.circle{
+  position:absolute;
+  right:85px;
+  bottom:57px;
+  width:7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: white;
+}
+.bullet {
+  position: absolute;
+  border-radius: 10px;
+  width: 130px;
+  height: 65px;
+  background-color: var(--clr-white);
+  right: 120px;
+  top: 110px;
+  z-index: 1;
+}
+
+.bullet::before {
+  content: '';
+  border: 0 solid transparent;
+}
+
 }
 
 .attribution {
